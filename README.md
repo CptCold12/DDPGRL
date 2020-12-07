@@ -94,11 +94,10 @@ If you want to train the agent, execute the **train.py** file. After reaching th
 
 ## Trace of the training
 
-![Training](https://github.com/escribano89/reacher-ddpg/blob/main/scores.PNG)
+![Training](https://github.com/escribano89/reacher-ddpg/blob/main/score.PNG)
 ![Training](https://github.com/escribano89/reacher-ddpg/blob/main/trace.PNG)
 
 ## Video
-
 
 You can find an example of the trained agent [here](https://youtu.be/Lm9tgbPyDFM)
 
