@@ -2,7 +2,7 @@
 
 ### Project Details
 
-This is the second project of the Deep Reinforcement Learning Nanodegree. I trained a DDPG Agent to solve the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment. 
+This is the second project of the Deep Reinforcement Learning Nanodegree. I trained a DDPG Agent to solve the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.  This project is influenced by the previous one: https://github.com/escribano89/bananas-dqn and the DDPG implementations from the Udacity's repository https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum.
 
 In this environment, a double-jointed arm can move to target locations. A reward is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
@@ -84,9 +84,9 @@ If you want to train the agent, execute the **train.py** file. After reaching th
 * agent: implemented agent using the DDPG algorithm (without exploration noise)
 * actor: the actor NN model
 * critic: the critic NN model
-* unity_env: a class for hanlding the unity environment
+* unity_env: a class for handling the unity environment
 * replay_buffer: a class for handling the experience replay
-* test.py: Entry point for testing the agent using the trained agent
+* test.py: Entry point for testing the agent using the trained networks
 * actor_theta.pth, critic_theta.pth: Our model's weights ***(Solved in less than 120 episodes)***
 
 ## Trace of the training
