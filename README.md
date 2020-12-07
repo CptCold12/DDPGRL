@@ -28,8 +28,6 @@ your agents must get an average score of +30 (over 100 consecutive episodes, and
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
 
-### Requirements
-
 ## Requirements
 In order to prepare the environment, follow the next steps after downloading this repository:
 * Create a new environment:
