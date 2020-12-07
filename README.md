@@ -69,7 +69,7 @@ In order to prepare the environment, follow the next steps after downloading thi
 
 * Unzip the downloaded file and move it inside the project's root directory
 * Change the kernel of you environment to `drlnd`
-* Open the **train.py** and the **test.py** files and change the path to the unity environment appropriately (Reacher.exe path)
+* Open the **train.py** and the **test.py** files and change the path to the unity environment appropriately (UNITY_EXE_PATH=PATH_OF_THE_REACHER_EXE)
 
 ## Getting started
 
