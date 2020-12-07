@@ -61,11 +61,11 @@ In order to prepare the environment, follow the next steps after downloading thi
 	python -m ipykernel install --user --name drlnd --display-name "drlnd"
 ```
 
-* Download the Unity Environment (thanks to Udacity) which matches your operating system:
-        * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
-       	* Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
-        * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
-        * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
+* Download the Unity Environment (thanks to Udacity) which matches your operating system:<br>
+        * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)<br>
+       	* Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)<br>
+        * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)<br>
+        * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)<br>
 
 * Unzip the downloaded file and move it inside the project's root directory
 * Change the kernel of you environment to `drlnd`
@@ -73,7 +73,8 @@ In order to prepare the environment, follow the next steps after downloading thi
 
 ## Getting started
 
-If you want to test the trained agent, execute the **test.py** file setting (don't forget to point to the unity environment executable). 
+If you want to test the trained agent, execute the **test.py** file setting *(don't forget to point to the unity environment executable)*. 
+
 If you want to train the agent, execute the **train.py** file. After reaching the goal, the networks weights will be stored in the project's root folder.
 
 
