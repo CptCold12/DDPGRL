@@ -87,7 +87,7 @@ If you want to train the agent, execute the **train.py** file. After reaching th
 * unity_env: a class for hanlding the unity environment
 * replay_buffer: a class for handling the experience replay
 * test.py: Entry point for testing the agent using the trained agent
-* actor_theta.pth, critic_theta: Our model's weights ***(Solved in less than 120 episodes)***
+* actor_theta.pth, critic_theta.pth: Our model's weights ***(Solved in less than 120 episodes)***
 
 ## Trace of the training
 
