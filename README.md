@@ -73,7 +73,7 @@ In order to prepare the environment, follow the next steps after downloading thi
 
 ## Getting started
 
-If you want to test the trained agent, execute the **test.py** file *(don't forget to point to the unity environment executable)*. 
+If you want to test the trained agent, execute the **test.py** file. 
 
 If you want to train the agent, execute the **train.py** file. After reaching the goal, the networks weights will be stored in the project's root folder.
 
