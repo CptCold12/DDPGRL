@@ -2,9 +2,7 @@
 
 ### Project Details
 
-This is the second project of the Deep Reinforcement Learning Nanodegree. I trained a DDPG Agent to solve the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment. 
-
-![Trained Agent][image1]
+This is the second project of the Deep Reinforcement Learning Nanodegree. I trained a DDPG Agent to solve the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.  This project is influenced by the previous one: https://github.com/escribano89/bananas-dqn and the DDPG implementations from the Udacity's repository https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum.
 
 In this environment, a double-jointed arm can move to target locations. A reward is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
@@ -29,8 +27,6 @@ your agents must get an average score of +30 (over 100 consecutive episodes, and
 - This yields an **average score** for each episode (where the average is over all 20 agents).
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
-
-### Requirements
 
 ## Requirements
 In order to prepare the environment, follow the next steps after downloading this repository:
@@ -65,19 +61,20 @@ In order to prepare the environment, follow the next steps after downloading thi
 	python -m ipykernel install --user --name drlnd --display-name "drlnd"
 ```
 
-* Download the Unity Environment (thanks to Udacity) which matches your operating system:
-        * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
-       	* Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
-        * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
-        * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
+* Download the Unity Environment (thanks to Udacity) which matches your operating system:<br>
+        * Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)<br>
+       	* Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)<br>
+        * Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)<br>
+        * Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)<br>
 
 * Unzip the downloaded file and move it inside the project's root directory
 * Change the kernel of you environment to `drlnd`
-* Open the **train.py** and the **test.py** files and change the path to the unity environment appropriately (Reacher.exe path)
+* Open the **train.py** and the **test.py** files and change the path to the unity environment appropriately (UNITY_EXE_PATH=PATH_OF_THE_REACHER_EXE)
 
 ## Getting started
 
-If you want to test the trained agent, execute the **test.py** file setting (don't forget to point to the unity environment executable). 
+If you want to test the trained agent, execute the **test.py** file. 
+
 If you want to train the agent, execute the **train.py** file. After reaching the goal, the networks weights will be stored in the project's root folder.
 
 
@@ -87,18 +84,18 @@ If you want to train the agent, execute the **train.py** file. After reaching th
 * agent: implemented agent using the DDPG algorithm (without exploration noise)
 * actor: the actor NN model
 * critic: the critic NN model
-* unity_env: a class for hanlding the unity environment
+* unity_env: a class for handling the unity environment
 * replay_buffer: a class for handling the experience replay
-* test.py: Entry point for testing the agent using the trained agent
-* actor_theta.pth, critic_theta: Our model's weights ***(Solved in less than 120 episodes)***
+* test.py: Entry point for testing the agent using the trained networks
+* actor_theta.pth, critic_theta.pth: Our model's weights ***(Solved in less than 120 episodes)***
 
 ## Trace of the training
 
-![Training](https://github.com/escribano89/reacher-ddpg/blob/main/scores.PNG)
+![Training](https://github.com/escribano89/reacher-ddpg/blob/main/score.PNG)
+
 ![Training](https://github.com/escribano89/reacher-ddpg/blob/main/trace.PNG)
 
 ## Video
-
 
 You can find an example of the trained agent [here](https://youtu.be/Lm9tgbPyDFM)
 
