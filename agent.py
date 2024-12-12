@@ -5,13 +5,14 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 from replay_buffer import ReplayBuffer
+import numpy as np
 
 # Replay Buffer Size
 BUFFER_SIZE = int(1e6)
 # Minibatch Size
-BATCH_SIZE = 256 
+BATCH_SIZE = 256
 # Discount Gamma
-GAMMA = 0.995 
+GAMMA = 0.99 
 # Soft Update Value
 TAU = 1e-2   
 # Learning rates for each NN      
@@ -49,6 +50,11 @@ class DDPG():
         # Ensure that both networks have the same weights
         self.deep_copy(self.actor_target, self.actor_regular)
         self.deep_copy(self.critic_target, self.critic_regular)
+
+        self.actor_loss_history = []
+        self.critic_loss_history = []
+        self.actor_gradient_norms = []
+        self.critic_gradient_norms = []
 
     def step(self, states, actions, rewards, next_states, dones, timestep):
         # Save collected experiences
@@ -97,6 +103,10 @@ class DDPG():
         # Minimize the loss
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
+
+        critic_grad_norm = self.compute_gradient_norm(self.critic_regular)
+        self.critic_gradient_norms.append(critic_grad_norm)
+
         self.critic_optimizer.step()
 
         # Update the actor neural network
@@ -108,6 +118,10 @@ class DDPG():
         # Minimize the loss function
         self.actor_optimizer.zero_grad()
         actor_loss.backward()
+
+        actor_grad_norm = self.compute_gradient_norm(self.actor_regular)
+        self.actor_gradient_norms.append(actor_grad_norm)
+
         self.actor_optimizer.step()
 
         # Update target network using the soft update approach (slowly updating)
@@ -123,5 +137,14 @@ class DDPG():
     def deep_copy(self, target, source):
         for target_param, param in zip(target.parameters(), source.parameters()):
             target_param.data.copy_(param.data)
+
+    def compute_gradient_norm(self, model):
+        total_norm = 0.0
+        for param in model.parameters():
+            if param.grad is not None:
+                param_norm = param.grad.data.norm(2)
+                total_norm += param_norm.item() ** 2
+        return np.sqrt(total_norm)
+
 
 

@@ -5,6 +5,7 @@ def init_environment(executable_path):
     
     # Init the Reacher Unity Environment
     env = UnityEnvironment(file_name=executable_path)
+    env.reset()
     # Get the default brain
     brain_name = env.brain_names[0]
     brain = env.brains[brain_name]
